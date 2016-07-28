@@ -1,0 +1,28 @@
+本项目需要调用聚合数据提供的城市数据以及高德地图提供的各项公交数据，
+以此需要与这两个数据提供方注册账号获取相关的识别码才可以正常使用。
+
+
+1. 聚合数据：
+
+聚合数据的获取需要注册后申请相关的服务数据，然后通过用自己的OpenID与服务器获得联系获取数据。
+
+（1）请找到com.example.a3包中的类AtoZActivity的92行：
+
+	92行：HttpGet _get = new HttpGet("http://api.juheapi.com/bus/citys?key=c981b5def4c8a5b7825d8a064b815b04");
+
+（2）在聚合数据官网注册后申请全国公交查询的城市数据，然后再从用户中心的账户信息中复制openID，
+     将其中的“c981b5def4c8a5b7825d8a064b815b04”替换为自己的openID即可。
+
+
+2.高德地图
+
+使用高德地图服务需要在高德开放平台成为开发者。
+
+（1）注册成功后，在控制台创建新应用，创建后添加新Key。
+
+（2）添加新Key时，Key名称要按照规范，服务平台选择Android平台，填写本机Eclipse的发布版SHA1码和主函数包名（本项目的为com.example.a3）
+
+（3）添加成功后复制Key，替换工程下AndroidManifest.xml的36行处的value值即可：
+	
+     android:value="eecf9090105dc48b99b0b96b736c0d30"
+
