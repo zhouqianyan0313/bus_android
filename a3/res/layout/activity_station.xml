@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".StationActivity" >
+
+    <TextView
+        android:id="@+id/stationHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="117dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/station_head" />
+
+    <TextView
+        android:id="@+id/city_e3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/stationHead"
+        android:layout_marginTop="14dp"
+        android:text="@string/city_text" />
+
+    <Spinner
+        android:id="@+id/city_station"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/stationHead"
+        android:layout_alignTop="@+id/city_e3" />
+
+    <TextView
+        android:id="@+id/station_e1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/city_e3"
+        android:layout_below="@+id/city_station"
+        android:layout_marginTop="30dp"
+        android:text="@string/station_text" />
+
+    <EditText
+        android:id="@+id/station"
+        android:hint="@string/station_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/station_e1"
+        android:layout_alignBottom="@+id/station_e1"
+        android:layout_centerHorizontal="true"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/station_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/city_station"
+        android:layout_below="@+id/station"
+        android:layout_marginTop="36dp"
+        android:text="@string/search_text" />
+
+</RelativeLayout>

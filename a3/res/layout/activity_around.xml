@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".AroundActivity" >
+
+    <TextView
+        android:id="@+id/aroundHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/around_head"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/city_e4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/aroundHead"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="29dp"
+        android:text="@string/city_text" />
+
+    <Spinner
+        android:id="@+id/city_around"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/aroundHead"
+        android:layout_below="@+id/aroundHead"
+        android:layout_marginTop="14dp" />
+
+    <TextView
+        android:id="@+id/around_e1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/city_e4"
+        android:layout_below="@+id/city_around"
+        android:layout_marginTop="32dp"
+        android:text="@string/around_text" />
+
+    <Spinner
+        android:id="@+id/juli_spinner"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/city_around"
+        android:layout_marginRight="21dp"
+        android:layout_marginTop="14dp" />
+
+    <Button
+        android:id="@+id/around_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="58dp"
+        android:text="@string/search_text" />
+
+    <TextView
+        android:id="@+id/dingwei_e1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/around_e1"
+        android:layout_below="@+id/juli_spinner"
+        android:layout_marginTop="38dp"
+        android:text="@string/dingwei_text" />
+
+    <TextView
+        android:id="@+id/place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/dingwei_e1"
+        android:layout_alignLeft="@+id/around_b"
+        android:text="@string/place_text" />
+
+</RelativeLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.a3"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <!--<uses-permission android:name="android.permission.INTERNET" />  -->
+    <!--用于进行网络定位-->
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+	<!--用于访问GPS定位-->
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+	<!--获取运营商信息，用于支持提供运营商信息相关的接口-->
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	<!--用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+	<!--这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+	<!--用于访问网络，网络定位需要上网-->
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<!--用于读取手机当前的状态-->
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+	<!--写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据-->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/bus_116"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="eecf9090105dc48b99b0b96b736c0d30" />
+        <activity
+            android:name="com.example.a3.LoginActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.a3.WelcomeActivity"
+            android:label="@string/title_activity_welcome" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.a3.MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name="com.example.a3.SelfInforActivity"
+            android:label="@string/title_activity_self_infor" >
+        </activity>
+        <activity
+            android:name="com.example.a3.SignUpActivity"
+            android:label="@string/title_activity_sign_up" >
+        </activity>
+        <activity
+            android:name="com.example.a3.AtoZActivity"
+            android:label="@string/title_activity_ato_z" >
+            
+        </activity>
+        <activity
+            android:name="com.example.a3.SideBar"
+            android:label="@string/title_activity_side_bar" >
+        </activity>
+        <activity
+            android:name="com.example.a3.CityActivity"
+            android:label="@string/title_activity_city" >
+        </activity>
+        <activity
+            android:name="com.example.a3.DatabaseActivity"
+            android:label="@string/title_activity_database" >
+            
+        </activity>
+        <activity
+            android:name="com.example.a3.BusActivity"
+            android:label="@string/title_activity_bus" >
+        </activity>
+        <activity
+            android:name="com.example.a3.ChangeBusActivity"
+            android:label="@string/title_activity_change_bus" >
+        </activity>
+        <activity
+            android:name="com.example.a3.StationActivity"
+            android:label="@string/title_activity_station" >
+        </activity>
+        <activity
+            android:name="com.example.a3.AroundActivity"
+            android:label="@string/title_activity_around" >
+        </activity>
+         <activity
+            android:name="com.amap.map2d.demo.poisearch.PoiAroundSearchActivity"
+            android:label="@string/title_activity_around" >
+            
+        </activity>
+        <activity
+            android:name="com.amap.map2d.demo.location.LocationSourceActivity"
+            android:label="@string/dingwei_text" >
+        </activity>
+        <activity
+            android:name="com.amap.map2d.demo.poisearch.PoiKeywordSearchActivity"
+            android:label="@string/station_text" >
+        </activity>
+        
+        <activity
+            android:name="com.amap.map2d.demo.weather.WeatherSearchActivity"
+            android:label="@string/weather_demo" >
+        </activity>
+        <activity
+            android:name="com.amap.map2d.demo.busline.BuslineActivity"
+            android:label="@string/busline" >
+        </activity>
+        <activity
+            android:name="com.amap.map2d.demo.route.BusRouteShowActivity"
+            android:label="@string/busline" >
+        </activity>
+        
+        <activity
+            android:name="com.amap.map2d.demo.route.BusRouteDetailActivity"
+            android:label="@string/busline" >
+        </activity>
+        <activity
+            android:name="com.amap.map2d.demo.route.RouteActivity"
+            android:label="路线规划" >
+        </activity>
+        com.amap.map2d.demo.district
+        <activity
+            android:name="com.amap.map2d.demo.district.DistrictActivity"
+            android:label="城市选择" >
+        </activity>
+        
+        <service android:name="com.amap.api.location.APSService"></service>
+        
+    </application>
+
+</manifest>
